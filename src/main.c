@@ -6,5 +6,6 @@ int main(void) {
   insertKey(tree, 11);
   insertKey(tree, 12);
   insertKey(tree, 1);
+  inorder(tree->root);
   return 0;
 }

@@ -3,7 +3,7 @@
 
 typedef struct node *NodePtr;
 struct node {
-  int data;
+  int key;
   NodePtr parent;
   NodePtr left;
   NodePtr right;
@@ -14,14 +14,14 @@ struct bst {
   NodePtr root;
 };
 
-BstPtr newBinarySearchTree(int data);
-NodePtr newNode(int data);
+BstPtr newBinarySearchTree(int key);
+NodePtr newNode(int key);
 void insertKey(BstPtr tree, int key);
 void deleteKey(BstPtr tree, int key);
-int searchKey(BstPtr tree, int key);
-int minKey(BstPtr tree);
-int maxKey(BstPtr tree);
-void inorder(BstPtr tree);
-void preorder(BstPtr tree);
-void postorder(BstPtr tree);
+NodePtr searchKey(NodePtr root, int key);
+NodePtr minKey(NodePtr root);
+NodePtr maxKey(NodePtr root);
+void inorder(NodePtr node);
+void preorder(NodePtr node);
+void postorder(NodePtr node);
 #endif
